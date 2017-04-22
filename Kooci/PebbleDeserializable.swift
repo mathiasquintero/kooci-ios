@@ -14,5 +14,6 @@ protocol PebbleDeserializable {
 
 protocol MessageReceiver: class {
     associatedtype Message: PebbleDeserializable
+    static var uuid: UUID { get }
     func broker(_ broker: MessageBroker<Self>, didReceive message: Message)
 }

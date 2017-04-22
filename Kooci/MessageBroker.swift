@@ -27,8 +27,13 @@ class MessageBroker<Receiver: MessageReceiver>: NSObject, PBPebbleCentralDelegat
     lazy var manager: PBPebbleCentral = {
         let manager = PBPebbleCentral.default()
         manager.delegate = self
+        manager.appUUID = Receiver.uuid
         return manager
     }()
+    
+    func start() {
+        manager.run()
+    }
     
     func pebbleCentral(_ central: PBPebbleCentral, watchDidConnect watch: PBWatch, isNew: Bool) {
         self.watch = watch
