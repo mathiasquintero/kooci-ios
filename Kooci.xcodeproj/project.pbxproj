@@ -12,6 +12,8 @@
 		0E96847A1EAB724E00AD52A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E9684781EAB724E00AD52A1 /* Main.storyboard */; };
 		0E96847C1EAB724E00AD52A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E96847B1EAB724E00AD52A1 /* Assets.xcassets */; };
 		0E96847F1EAB724E00AD52A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E96847D1EAB724E00AD52A1 /* LaunchScreen.storyboard */; };
+		0E9684871EAB733400AD52A1 /* MessageBroker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9684861EAB733400AD52A1 /* MessageBroker.swift */; };
+		0E9684891EAB734200AD52A1 /* PebbleDeserializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9684881EAB734200AD52A1 /* PebbleDeserializable.swift */; };
 		AA8D15E20ED82DBDBDAEEDF4 /* Pods_Kooci.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DB25BED1512ABD29FC18604 /* Pods_Kooci.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,8 @@
 		0E96847B1EAB724E00AD52A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E96847E1EAB724E00AD52A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E9684801EAB724E00AD52A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E9684861EAB733400AD52A1 /* MessageBroker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBroker.swift; sourceTree = "<group>"; };
+		0E9684881EAB734200AD52A1 /* PebbleDeserializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PebbleDeserializable.swift; sourceTree = "<group>"; };
 		1DB25BED1512ABD29FC18604 /* Pods_Kooci.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kooci.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		624EC72CF554CE7EB7286EE7 /* Pods-Kooci.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kooci.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kooci/Pods-Kooci.debug.xcconfig"; sourceTree = "<group>"; };
 		CF72BEE338CEBEB579B7C482 /* Pods-Kooci.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kooci.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kooci/Pods-Kooci.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,12 +67,22 @@
 			children = (
 				0E9684741EAB724E00AD52A1 /* AppDelegate.swift */,
 				0E9684761EAB724E00AD52A1 /* ViewController.swift */,
+				0E96848A1EAB77A200AD52A1 /* Messaging */,
 				0E9684781EAB724E00AD52A1 /* Main.storyboard */,
 				0E96847B1EAB724E00AD52A1 /* Assets.xcassets */,
 				0E96847D1EAB724E00AD52A1 /* LaunchScreen.storyboard */,
 				0E9684801EAB724E00AD52A1 /* Info.plist */,
 			);
 			path = Kooci;
+			sourceTree = "<group>";
+		};
+		0E96848A1EAB77A200AD52A1 /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				0E9684861EAB733400AD52A1 /* MessageBroker.swift */,
+				0E9684881EAB734200AD52A1 /* PebbleDeserializable.swift */,
+			);
+			name = Messaging;
 			sourceTree = "<group>";
 		};
 		856D870E475DCA1E3DCF3418 /* Pods */ = {
@@ -214,6 +228,8 @@
 			files = (
 				0E9684771EAB724E00AD52A1 /* ViewController.swift in Sources */,
 				0E9684751EAB724E00AD52A1 /* AppDelegate.swift in Sources */,
+				0E9684871EAB733400AD52A1 /* MessageBroker.swift in Sources */,
+				0E9684891EAB734200AD52A1 /* PebbleDeserializable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +397,7 @@
 				0E9684851EAB724E00AD52A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
