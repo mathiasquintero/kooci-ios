@@ -9,9 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var gestureManager = GestureManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        gestureManager.start()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -21,4 +26,12 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension ViewController: GestureDelegate {
+    
+    func gestureManager(_ manager: GestureManager, didChangeState: GestureState) {
+        
+    }
+    
 }

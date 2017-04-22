@@ -13,6 +13,7 @@
 		0E15012E1EABACCC00EA9B7A /* GestureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1501281EABACCC00EA9B7A /* GestureManager.swift */; };
 		0E15012F1EABACCC00EA9B7A /* GestureState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1501291EABACCC00EA9B7A /* GestureState.swift */; };
 		0E1501301EABACCC00EA9B7A /* PourGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E15012A1EABACCC00EA9B7A /* PourGesture.swift */; };
+		0E1501341EABC30C00EA9B7A /* Subgesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1501331EABC30C00EA9B7A /* Subgesture.swift */; };
 		0E9684751EAB724E00AD52A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9684741EAB724E00AD52A1 /* AppDelegate.swift */; };
 		0E9684771EAB724E00AD52A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9684761EAB724E00AD52A1 /* ViewController.swift */; };
 		0E96847A1EAB724E00AD52A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E9684781EAB724E00AD52A1 /* Main.storyboard */; };
@@ -21,6 +22,9 @@
 		0E9684871EAB733400AD52A1 /* MessageBroker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9684861EAB733400AD52A1 /* MessageBroker.swift */; };
 		0E9684891EAB734200AD52A1 /* PebbleDeserializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9684881EAB734200AD52A1 /* PebbleDeserializable.swift */; };
 		0E96848C1EAB77D500AD52A1 /* AccelerometerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E96848B1EAB77D500AD52A1 /* AccelerometerData.swift */; };
+		0EE8BF141EABF6FD0069683B /* gestures-dataset in Resources */ = {isa = PBXBuildFile; fileRef = 0EE8BF131EABF6FD0069683B /* gestures-dataset */; };
+		0EE8BF161EABF9DD0069683B /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE8BF151EABF9DD0069683B /* Classifier.swift */; };
+		0EE8BF181EABFEB00069683B /* ShakeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE8BF171EABFEB00069683B /* ShakeGesture.swift */; };
 		AA8D15E20ED82DBDBDAEEDF4 /* Pods_Kooci.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DB25BED1512ABD29FC18604 /* Pods_Kooci.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +35,7 @@
 		0E1501281EABACCC00EA9B7A /* GestureManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureManager.swift; sourceTree = "<group>"; };
 		0E1501291EABACCC00EA9B7A /* GestureState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureState.swift; sourceTree = "<group>"; };
 		0E15012A1EABACCC00EA9B7A /* PourGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PourGesture.swift; sourceTree = "<group>"; };
+		0E1501331EABC30C00EA9B7A /* Subgesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subgesture.swift; sourceTree = "<group>"; };
 		0E9684711EAB724D00AD52A1 /* Kooci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kooci.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E9684741EAB724E00AD52A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E9684761EAB724E00AD52A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +46,9 @@
 		0E9684861EAB733400AD52A1 /* MessageBroker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBroker.swift; sourceTree = "<group>"; };
 		0E9684881EAB734200AD52A1 /* PebbleDeserializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PebbleDeserializable.swift; sourceTree = "<group>"; };
 		0E96848B1EAB77D500AD52A1 /* AccelerometerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerData.swift; sourceTree = "<group>"; };
+		0EE8BF131EABF6FD0069683B /* gestures-dataset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "gestures-dataset"; sourceTree = "<group>"; };
+		0EE8BF151EABF9DD0069683B /* Classifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
+		0EE8BF171EABFEB00069683B /* ShakeGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeGesture.swift; sourceTree = "<group>"; };
 		1DB25BED1512ABD29FC18604 /* Pods_Kooci.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kooci.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		624EC72CF554CE7EB7286EE7 /* Pods-Kooci.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kooci.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kooci/Pods-Kooci.debug.xcconfig"; sourceTree = "<group>"; };
 		CF72BEE338CEBEB579B7C482 /* Pods-Kooci.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kooci.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kooci/Pods-Kooci.release.xcconfig"; sourceTree = "<group>"; };
@@ -62,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				0E1501321EABACFD00EA9B7A /* Gestures */,
+				0E96848B1EAB77D500AD52A1 /* AccelerometerData.swift */,
 				0E1501261EABACCC00EA9B7A /* GestureType.swift */,
 				0E1501271EABACCC00EA9B7A /* GestureDelegate.swift */,
 				0E1501281EABACCC00EA9B7A /* GestureManager.swift */,
@@ -74,7 +83,10 @@
 			isa = PBXGroup;
 			children = (
 				0E1501251EABACCC00EA9B7A /* Gesture.swift */,
+				0EE8BF151EABF9DD0069683B /* Classifier.swift */,
 				0E15012A1EABACCC00EA9B7A /* PourGesture.swift */,
+				0EE8BF171EABFEB00069683B /* ShakeGesture.swift */,
+				0E1501331EABC30C00EA9B7A /* Subgesture.swift */,
 			);
 			name = Gestures;
 			sourceTree = "<group>";
@@ -82,6 +94,7 @@
 		0E9684681EAB724D00AD52A1 = {
 			isa = PBXGroup;
 			children = (
+				0EE8BF131EABF6FD0069683B /* gestures-dataset */,
 				0E9684731EAB724D00AD52A1 /* Kooci */,
 				0E9684721EAB724D00AD52A1 /* Products */,
 				856D870E475DCA1E3DCF3418 /* Pods */,
@@ -102,7 +115,6 @@
 			children = (
 				0E9684741EAB724E00AD52A1 /* AppDelegate.swift */,
 				0E9684761EAB724E00AD52A1 /* ViewController.swift */,
-				0E96848B1EAB77D500AD52A1 /* AccelerometerData.swift */,
 				0E1501311EABACD600EA9B7A /* Gesture Recognition */,
 				0E96848A1EAB77A200AD52A1 /* Messaging */,
 				0E9684781EAB724E00AD52A1 /* Main.storyboard */,
@@ -202,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EE8BF141EABF6FD0069683B /* gestures-dataset in Resources */,
 				0E96847F1EAB724E00AD52A1 /* LaunchScreen.storyboard in Resources */,
 				0E96847C1EAB724E00AD52A1 /* Assets.xcassets in Resources */,
 				0E96847A1EAB724E00AD52A1 /* Main.storyboard in Resources */,
@@ -265,8 +278,11 @@
 			files = (
 				0E96848C1EAB77D500AD52A1 /* AccelerometerData.swift in Sources */,
 				0E9684771EAB724E00AD52A1 /* ViewController.swift in Sources */,
+				0EE8BF181EABFEB00069683B /* ShakeGesture.swift in Sources */,
 				0E1501301EABACCC00EA9B7A /* PourGesture.swift in Sources */,
+				0EE8BF161EABF9DD0069683B /* Classifier.swift in Sources */,
 				0E15012D1EABACCC00EA9B7A /* GestureDelegate.swift in Sources */,
+				0E1501341EABC30C00EA9B7A /* Subgesture.swift in Sources */,
 				0E9684751EAB724E00AD52A1 /* AppDelegate.swift in Sources */,
 				0E15012B1EABACCC00EA9B7A /* Gesture.swift in Sources */,
 				0E9684871EAB733400AD52A1 /* MessageBroker.swift in Sources */,

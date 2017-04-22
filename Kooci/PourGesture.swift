@@ -16,7 +16,7 @@ class PourGesture: Gesture {
         self.amountLeft = amount
     }
     
-    func state(for frames: [AccelerometerInformation]) -> GestureState {
+    func state(for frames: [AccelerometerData]) -> GestureState {
         // TODO: Recognize Gesture
         return .stale
     }

@@ -11,6 +11,5 @@ import Foundation
 enum GestureState {
     case stale
     case inProgress
-    case interrupted
     case done
 }

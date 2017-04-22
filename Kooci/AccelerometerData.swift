@@ -8,64 +8,23 @@
 
 import Foundation
 
-struct AccelerometerInformation {
-    
-    struct AccelerometerData {
-        let x: Int
-        let y: Int
-        let z: Int
-    }
-    
-    let before: AccelerometerData
-    let after: AccelerometerData
-    
+struct AccelerometerData {
+    let x: Float
+    let y: Float
+    let z: Float
 }
 
-extension AccelerometerInformation: PebbleDeserializable {
-    
-    init?(from message: [NSNumber : Any]) {
-        guard let firstArray = message[0] as? [Any],
-            let secondArray = message[1] as? [Any],
-            let before = AccelerometerData(data: firstArray),
-            let after = AccelerometerData(data: secondArray) else {
-                
-                return nil
-        }
-        self.init(before: before, after: after)
-    }
-    
-}
 
-extension AccelerometerInformation.AccelerometerData {
+extension AccelerometerData: PebbleDeserializable {
     
-    init?(data: [Any]) {
+    init?(from data: [NSNumber : Any]) {
         guard let x = data[0] as? Int,
             let y = data[1] as? Int,
             let z = data[2] as? Int else {
                 
                 return nil
         }
-        self.init(x: x, y: y, z: z)
-    }
-    
-}
-
-extension AccelerometerInformation {
-    
-    var isGoingUp: Bool {
-        return true
-    }
-    
-    var isGoingDown: Bool {
-        return true
-    }
-    
-    var isGoingLeft: Bool {
-        return true
-    }
-    
-    var isGoingRight: Bool {
-        return true
+        self.init(x: Float(x) / 1000, y: Float(y) / 1000, z: Float(z) / 1000)
     }
     
 }

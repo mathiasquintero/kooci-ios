@@ -10,11 +10,15 @@ import Foundation
 
 final class GestureManager: NSObject {
     
-    var data = [AccelerometerInformation]()
+    var data = [AccelerometerData]()
     
     var gesture: Gesture?
     var broker = MessageBroker<GestureManager>()
     
+    func start() {
+        broker.receiver = self
+        broker.start()
+    }
     
 }
 
@@ -24,7 +28,7 @@ extension GestureManager: MessageReceiver {
         return UUID(uuidString: "8CB491E3-4A2E-4094-8B04-17F6954F99C5")!
     }
     
-    func broker(_ broker: MessageBroker<GestureManager>, didReceive message: AccelerometerInformation) {
+    func broker(_ broker: MessageBroker<GestureManager>, didReceive message: AccelerometerData) {
         
     }
     
