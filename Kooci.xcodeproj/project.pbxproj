@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E15012B1EABACCC00EA9B7A /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1501251EABACCC00EA9B7A /* Gesture.swift */; };
+		0E15012C1EABACCC00EA9B7A /* GestureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1501261EABACCC00EA9B7A /* GestureType.swift */; };
+		0E15012D1EABACCC00EA9B7A /* GestureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1501271EABACCC00EA9B7A /* GestureDelegate.swift */; };
+		0E15012E1EABACCC00EA9B7A /* GestureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1501281EABACCC00EA9B7A /* GestureManager.swift */; };
+		0E15012F1EABACCC00EA9B7A /* GestureState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1501291EABACCC00EA9B7A /* GestureState.swift */; };
+		0E1501301EABACCC00EA9B7A /* PourGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E15012A1EABACCC00EA9B7A /* PourGesture.swift */; };
 		0E9684751EAB724E00AD52A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9684741EAB724E00AD52A1 /* AppDelegate.swift */; };
 		0E9684771EAB724E00AD52A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9684761EAB724E00AD52A1 /* ViewController.swift */; };
 		0E96847A1EAB724E00AD52A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E9684781EAB724E00AD52A1 /* Main.storyboard */; };
@@ -19,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E1501251EABACCC00EA9B7A /* Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gesture.swift; sourceTree = "<group>"; };
+		0E1501261EABACCC00EA9B7A /* GestureType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureType.swift; sourceTree = "<group>"; };
+		0E1501271EABACCC00EA9B7A /* GestureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureDelegate.swift; sourceTree = "<group>"; };
+		0E1501281EABACCC00EA9B7A /* GestureManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureManager.swift; sourceTree = "<group>"; };
+		0E1501291EABACCC00EA9B7A /* GestureState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureState.swift; sourceTree = "<group>"; };
+		0E15012A1EABACCC00EA9B7A /* PourGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PourGesture.swift; sourceTree = "<group>"; };
 		0E9684711EAB724D00AD52A1 /* Kooci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kooci.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E9684741EAB724E00AD52A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E9684761EAB724E00AD52A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +58,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E1501311EABACD600EA9B7A /* Gesture Recognition */ = {
+			isa = PBXGroup;
+			children = (
+				0E1501321EABACFD00EA9B7A /* Gestures */,
+				0E1501261EABACCC00EA9B7A /* GestureType.swift */,
+				0E1501271EABACCC00EA9B7A /* GestureDelegate.swift */,
+				0E1501281EABACCC00EA9B7A /* GestureManager.swift */,
+				0E1501291EABACCC00EA9B7A /* GestureState.swift */,
+			);
+			name = "Gesture Recognition";
+			sourceTree = "<group>";
+		};
+		0E1501321EABACFD00EA9B7A /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				0E1501251EABACCC00EA9B7A /* Gesture.swift */,
+				0E15012A1EABACCC00EA9B7A /* PourGesture.swift */,
+			);
+			name = Gestures;
+			sourceTree = "<group>";
+		};
 		0E9684681EAB724D00AD52A1 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +103,7 @@
 				0E9684741EAB724E00AD52A1 /* AppDelegate.swift */,
 				0E9684761EAB724E00AD52A1 /* ViewController.swift */,
 				0E96848B1EAB77D500AD52A1 /* AccelerometerData.swift */,
+				0E1501311EABACD600EA9B7A /* Gesture Recognition */,
 				0E96848A1EAB77A200AD52A1 /* Messaging */,
 				0E9684781EAB724E00AD52A1 /* Main.storyboard */,
 				0E96847B1EAB724E00AD52A1 /* Assets.xcassets */,
@@ -231,8 +265,14 @@
 			files = (
 				0E96848C1EAB77D500AD52A1 /* AccelerometerData.swift in Sources */,
 				0E9684771EAB724E00AD52A1 /* ViewController.swift in Sources */,
+				0E1501301EABACCC00EA9B7A /* PourGesture.swift in Sources */,
+				0E15012D1EABACCC00EA9B7A /* GestureDelegate.swift in Sources */,
 				0E9684751EAB724E00AD52A1 /* AppDelegate.swift in Sources */,
+				0E15012B1EABACCC00EA9B7A /* Gesture.swift in Sources */,
 				0E9684871EAB733400AD52A1 /* MessageBroker.swift in Sources */,
+				0E15012C1EABACCC00EA9B7A /* GestureType.swift in Sources */,
+				0E15012F1EABACCC00EA9B7A /* GestureState.swift in Sources */,
+				0E15012E1EABACCC00EA9B7A /* GestureManager.swift in Sources */,
 				0E9684891EAB734200AD52A1 /* PebbleDeserializable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

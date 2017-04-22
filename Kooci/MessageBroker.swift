@@ -12,17 +12,7 @@ import PebbleKit
 class MessageBroker<Receiver: MessageReceiver>: NSObject, PBPebbleCentralDelegate {
     
     weak var receiver: Receiver?
-    var watch: PBWatch? {
-        didSet {
-            watch?.appMessagesAddReceiveUpdateHandler { [unowned self] (watch, update) in
-                guard let message = Receiver.Message(from: update) else {
-                    return false
-                }
-                self.receiver?.broker(self, didReceive: message)
-                return true
-            }
-        }
-    }
+    var watch: PBWatch?
     
     lazy var manager: PBPebbleCentral = {
         let manager = PBPebbleCentral.default()
@@ -37,6 +27,17 @@ class MessageBroker<Receiver: MessageReceiver>: NSObject, PBPebbleCentralDelegat
     
     func pebbleCentral(_ central: PBPebbleCentral, watchDidConnect watch: PBWatch, isNew: Bool) {
         self.watch = watch
+        let update: [NSNumber : Any] = [ 0 : "test" ]
+        watch.appMessagesPushUpdate(update, with: Receiver.uuid) { (watch, update, error) in
+            print(watch.isConnected)
+        }
+        watch.appMessagesAddReceiveUpdateHandler({ (watch, update) in
+            guard let message = Receiver.Message(from: update) else {
+                return false
+            }
+            self.receiver?.broker(self, didReceive: message)
+            return true
+        }, with: Receiver.uuid)
     }
     
     func pebbleCentral(_ central: PBPebbleCentral, watchDidDisconnect watch: PBWatch) {
