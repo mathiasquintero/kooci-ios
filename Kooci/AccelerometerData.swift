@@ -24,7 +24,7 @@ extension AccelerometerData: PebbleDeserializable {
                 
                 return nil
         }
-        self.init(x: Float(x) / 1000, y: Float(y) / 1000, z: Float(z) / 1000)
+        self.init(x: min(Float(x) / 1000, 10.0), y: min(Float(y) / 1000, 10.0), z: min(Float(z) / 1000, 10.0))
     }
     
 }

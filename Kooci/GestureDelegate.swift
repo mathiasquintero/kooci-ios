@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol GestureDelegate {
-    func gestureManager(_ manager: GestureManager, didChangeState: GestureState)
+protocol GestureDelegate: class {
+    func gestureManager(_ manager: GestureManager, didFinish gesture: Gesture)
 }

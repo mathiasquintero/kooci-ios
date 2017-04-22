@@ -25,15 +25,29 @@ extension SimpleGesture {
             return .done
         }
         let frames = frames.from(index: index)
-        guard let classified = Classifier.shared.gestureFor(frames: frames) else {
+        guard frames.count > 8 else {
             return state
         }
-        if gesture == classified {
-            subgestures.remove(at: 0)
-        } else {
+        switch Classifier.shared.gestureFor(frames: frames) {
+        case .nothingByALongShot:
+            index = frames.count
             return .stale
+        case .inProgress(let possibilities):
+            if possibilities.contains(gesture) {
+                return .inProgress
+            } else {
+                index = frames.count
+                return .stale
+            }
+        case .maybe(let possibility):
+            if gesture == possibility {
+                index = frames.count
+                subgestures.remove(at: 0)
+                return .inProgress
+            } else {
+                return .stale
+            }
         }
-        return .inProgress
     }
     
     func state(for frames: [AccelerometerData]) -> GestureState {

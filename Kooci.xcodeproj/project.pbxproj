@@ -13,9 +13,7 @@
 		0E15012E1EABACCC00EA9B7A /* GestureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1501281EABACCC00EA9B7A /* GestureManager.swift */; };
 		0E15012F1EABACCC00EA9B7A /* GestureState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1501291EABACCC00EA9B7A /* GestureState.swift */; };
 		0E1501301EABACCC00EA9B7A /* PourGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E15012A1EABACCC00EA9B7A /* PourGesture.swift */; };
-		0E1501341EABC30C00EA9B7A /* Subgesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1501331EABC30C00EA9B7A /* Subgesture.swift */; };
 		0E9684751EAB724E00AD52A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9684741EAB724E00AD52A1 /* AppDelegate.swift */; };
-		0E9684771EAB724E00AD52A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9684761EAB724E00AD52A1 /* ViewController.swift */; };
 		0E96847A1EAB724E00AD52A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E9684781EAB724E00AD52A1 /* Main.storyboard */; };
 		0E96847C1EAB724E00AD52A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E96847B1EAB724E00AD52A1 /* Assets.xcassets */; };
 		0E96847F1EAB724E00AD52A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E96847D1EAB724E00AD52A1 /* LaunchScreen.storyboard */; };
@@ -25,6 +23,10 @@
 		0EE8BF141EABF6FD0069683B /* gestures-dataset in Resources */ = {isa = PBXBuildFile; fileRef = 0EE8BF131EABF6FD0069683B /* gestures-dataset */; };
 		0EE8BF161EABF9DD0069683B /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE8BF151EABF9DD0069683B /* Classifier.swift */; };
 		0EE8BF181EABFEB00069683B /* ShakeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE8BF171EABFEB00069683B /* ShakeGesture.swift */; };
+		0EE8BF1D1EAC1FF90069683B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE8BF191EAC1FF90069683B /* Recipe.swift */; };
+		0EE8BF1E1EAC1FF90069683B /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE8BF1A1EAC1FF90069683B /* Step.swift */; };
+		0EE8BF1F1EAC1FF90069683B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE8BF1B1EAC1FF90069683B /* ViewController.swift */; };
+		0EE8BF201EAC1FF90069683B /* WatsonServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE8BF1C1EAC1FF90069683B /* WatsonServices.swift */; };
 		AA8D15E20ED82DBDBDAEEDF4 /* Pods_Kooci.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DB25BED1512ABD29FC18604 /* Pods_Kooci.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +40,6 @@
 		0E1501331EABC30C00EA9B7A /* Subgesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subgesture.swift; sourceTree = "<group>"; };
 		0E9684711EAB724D00AD52A1 /* Kooci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kooci.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E9684741EAB724E00AD52A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E9684761EAB724E00AD52A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0E9684791EAB724E00AD52A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E96847B1EAB724E00AD52A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E96847E1EAB724E00AD52A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,10 @@
 		0EE8BF131EABF6FD0069683B /* gestures-dataset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "gestures-dataset"; path = "Kooci/gestures-dataset"; sourceTree = "<group>"; };
 		0EE8BF151EABF9DD0069683B /* Classifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
 		0EE8BF171EABFEB00069683B /* ShakeGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeGesture.swift; sourceTree = "<group>"; };
+		0EE8BF191EAC1FF90069683B /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		0EE8BF1A1EAC1FF90069683B /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		0EE8BF1B1EAC1FF90069683B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0EE8BF1C1EAC1FF90069683B /* WatsonServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatsonServices.swift; sourceTree = "<group>"; };
 		1DB25BED1512ABD29FC18604 /* Pods_Kooci.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kooci.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		624EC72CF554CE7EB7286EE7 /* Pods-Kooci.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kooci.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kooci/Pods-Kooci.debug.xcconfig"; sourceTree = "<group>"; };
 		CF72BEE338CEBEB579B7C482 /* Pods-Kooci.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kooci.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kooci/Pods-Kooci.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,7 +119,10 @@
 			isa = PBXGroup;
 			children = (
 				0E9684741EAB724E00AD52A1 /* AppDelegate.swift */,
-				0E9684761EAB724E00AD52A1 /* ViewController.swift */,
+				0EE8BF1B1EAC1FF90069683B /* ViewController.swift */,
+				0EE8BF191EAC1FF90069683B /* Recipe.swift */,
+				0EE8BF1A1EAC1FF90069683B /* Step.swift */,
+				0EE8BF211EAC20D80069683B /* Watson */,
 				0E1501311EABACD600EA9B7A /* Gesture Recognition */,
 				0E96848A1EAB77A200AD52A1 /* Messaging */,
 				0E9684781EAB724E00AD52A1 /* Main.storyboard */,
@@ -132,6 +140,14 @@
 				0E9684881EAB734200AD52A1 /* PebbleDeserializable.swift */,
 			);
 			name = Messaging;
+			sourceTree = "<group>";
+		};
+		0EE8BF211EAC20D80069683B /* Watson */ = {
+			isa = PBXGroup;
+			children = (
+				0EE8BF1C1EAC1FF90069683B /* WatsonServices.swift */,
+			);
+			name = Watson;
 			sourceTree = "<group>";
 		};
 		856D870E475DCA1E3DCF3418 /* Pods */ = {
@@ -277,18 +293,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E96848C1EAB77D500AD52A1 /* AccelerometerData.swift in Sources */,
-				0E9684771EAB724E00AD52A1 /* ViewController.swift in Sources */,
 				0EE8BF181EABFEB00069683B /* ShakeGesture.swift in Sources */,
+				0EE8BF1E1EAC1FF90069683B /* Step.swift in Sources */,
 				0E1501301EABACCC00EA9B7A /* PourGesture.swift in Sources */,
 				0EE8BF161EABF9DD0069683B /* Classifier.swift in Sources */,
+				0EE8BF201EAC1FF90069683B /* WatsonServices.swift in Sources */,
 				0E15012D1EABACCC00EA9B7A /* GestureDelegate.swift in Sources */,
-				0E1501341EABC30C00EA9B7A /* Subgesture.swift in Sources */,
 				0E9684751EAB724E00AD52A1 /* AppDelegate.swift in Sources */,
 				0E15012B1EABACCC00EA9B7A /* Gesture.swift in Sources */,
 				0E9684871EAB733400AD52A1 /* MessageBroker.swift in Sources */,
+				0EE8BF1D1EAC1FF90069683B /* Recipe.swift in Sources */,
 				0E15012C1EABACCC00EA9B7A /* GestureType.swift in Sources */,
 				0E15012F1EABACCC00EA9B7A /* GestureState.swift in Sources */,
 				0E15012E1EABACCC00EA9B7A /* GestureManager.swift in Sources */,
+				0EE8BF1F1EAC1FF90069683B /* ViewController.swift in Sources */,
 				0E9684891EAB734200AD52A1 /* PebbleDeserializable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

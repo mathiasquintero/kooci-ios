@@ -11,6 +11,12 @@ import Bayes
 
 class Classifier {
     
+    enum ClassificationResult {
+        case maybe(Subgesture)
+        case inProgress([Subgesture])
+        case nothingByALongShot
+    }
+    
     static var shared: Classifier = {
         let url = Bundle.main.url(forResource: "gestures-dataset", withExtension: nil)!
         let test = TestData.init(filePath: url)
@@ -23,13 +29,18 @@ class Classifier {
         self.internalClassifier = classifier
     }
     
-    func gestureFor(frames: [AccelerometerData]) -> Subgesture? {
+    func gestureFor(frames: [AccelerometerData]) -> ClassificationResult {
         let values = frames.flatMap { [$0.x, $0.y, $0.z] }
-        let probabilities: [Subgesture : Double] = internalClassifier.categoryProbabilities(values.makeIterator())
-        return probabilities.filter { $1 > 0.7 }
-                            .sorted { $0.1 > $1.1 }
-                            .map { $0.0 }
-                            .first
+        let probabilities = internalClassifier.categoryProbabilities(values.makeIterator()).sorted { $0.1 > $1.1 }
+        print(probabilities)
+        if let first = probabilities.first, first.value > 0.5 {
+            return .maybe(first.key)
+        }
+        let maybes = probabilities.filter { $0.value > 0 }
+        if maybes.count > 0 {
+            return .inProgress(maybes.map { $0.key })
+        }
+        return .nothingByALongShot
     }
     
 }

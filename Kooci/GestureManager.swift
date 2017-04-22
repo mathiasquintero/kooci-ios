@@ -10,9 +10,16 @@ import Foundation
 
 final class GestureManager: NSObject {
     
+    weak var delegate: GestureDelegate?
     var data = [AccelerometerData]()
     
-    var gesture: Gesture?
+    var state: GestureState?
+    var gesture: Gesture? {
+        didSet {
+            data.removeAll()
+        }
+    }
+    
     var broker = MessageBroker<GestureManager>()
     
     func start() {
@@ -29,7 +36,14 @@ extension GestureManager: MessageReceiver {
     }
     
     func broker(_ broker: MessageBroker<GestureManager>, didReceive message: AccelerometerData) {
-        
+        data.append(message)
+        guard let gesture = gesture else {
+            return
+        }
+        let state = gesture.state(for: data)
+        if self.state != nil, self.state != state {
+            print("Change to \(state)")
+        }
     }
     
 }
