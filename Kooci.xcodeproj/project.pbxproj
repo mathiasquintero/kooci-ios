@@ -46,7 +46,7 @@
 		0E9684861EAB733400AD52A1 /* MessageBroker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBroker.swift; sourceTree = "<group>"; };
 		0E9684881EAB734200AD52A1 /* PebbleDeserializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PebbleDeserializable.swift; sourceTree = "<group>"; };
 		0E96848B1EAB77D500AD52A1 /* AccelerometerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerData.swift; sourceTree = "<group>"; };
-		0EE8BF131EABF6FD0069683B /* gestures-dataset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "gestures-dataset"; sourceTree = "<group>"; };
+		0EE8BF131EABF6FD0069683B /* gestures-dataset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "gestures-dataset"; path = "Kooci/gestures-dataset"; sourceTree = "<group>"; };
 		0EE8BF151EABF9DD0069683B /* Classifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
 		0EE8BF171EABFEB00069683B /* ShakeGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeGesture.swift; sourceTree = "<group>"; };
 		1DB25BED1512ABD29FC18604 /* Pods_Kooci.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kooci.framework; sourceTree = BUILT_PRODUCTS_DIR; };
