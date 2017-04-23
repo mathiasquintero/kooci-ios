@@ -28,3 +28,23 @@ extension AccelerometerData: PebbleDeserializable {
     }
     
 }
+
+extension AccelerometerData {
+    
+    var norm: Float {
+        return sqrt(x * x + y * y + z * z)
+    }
+    
+}
+
+func +(lhs: AccelerometerData, rhs: AccelerometerData) -> AccelerometerData {
+    return AccelerometerData(x: lhs.x + rhs.x, y: lhs.y + rhs.y, z: lhs.z + rhs.z)
+}
+
+func -(lhs: AccelerometerData, rhs: AccelerometerData) -> AccelerometerData {
+    return AccelerometerData(x: lhs.x - rhs.x, y: lhs.y - rhs.y, z: lhs.z - rhs.z)
+}
+
+func *(lhs: Float, rhs: AccelerometerData) -> AccelerometerData {
+    return AccelerometerData(x: lhs * rhs.x, y: lhs * rhs.y, z: lhs * rhs.z)
+}
