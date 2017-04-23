@@ -73,7 +73,7 @@ class ViewController: UIViewController {
             for recipe in self.recipes {
                 let startTrigger = recipe.name.lowercased()
                 let lowerResult = result.lowercased()
-                if lowerResult.contains(startTrigger) {
+                if lowerResult.contains(startTrigger) || lowerResult.contains("please") {
                     // recipe name detected
                     if self.idle {
                         self.idle = false

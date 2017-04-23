@@ -35,6 +35,10 @@ extension AccelerometerData {
         return sqrt(x * x + y * y + z * z)
     }
     
+    var isStable: Bool {
+        return x < 0.01 && y < 0.01 && z < 0.01
+    }
+    
 }
 
 func +(lhs: AccelerometerData, rhs: AccelerometerData) -> AccelerometerData {

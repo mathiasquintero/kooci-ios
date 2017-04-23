@@ -49,7 +49,7 @@ extension GestureManager: MessageReceiver {
     func broker(_ broker: MessageBroker<GestureManager>, didReceive message: AccelerometerData) {
         let acceleration = modify(data: message)
         data.append(acceleration)
-        guard Date().timeIntervalSince(lastChanged) > 1 else {
+        guard Date().timeIntervalSince(lastChanged) > 1.5 else {
             return
         }
         guard let gesture = gesture else {
