@@ -29,6 +29,7 @@ class Recipe {
     func start() {
         currentStep = 0
         gestureManager.delegate = self
+        gestureManager.start()
         nextStep()
     }
     
