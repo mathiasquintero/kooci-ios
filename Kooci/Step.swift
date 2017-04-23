@@ -14,6 +14,21 @@ enum Gesture {
     case pour
 }
 
+extension Gesture {
+    
+    func gestureRecognizer() -> GestureRecognizer {
+        switch self {
+        case .addIngredient:
+            return AddingIngredientGestureRecognizer()
+        case .stir:
+            return StirringGestureRecognizer()
+        case .pour:
+            return PourGestureRecognizer()
+        }
+    }
+    
+}
+
 struct Step {
     let text: String
     let gestures: [Gesture]

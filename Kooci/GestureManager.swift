@@ -14,7 +14,7 @@ final class GestureManager: NSObject {
     var data = [AccelerometerData]()
     
     var state: GestureState?
-    var gesture: Gesture? {
+    var gesture: GestureRecognizer? {
         didSet {
             data.removeAll()
         }
