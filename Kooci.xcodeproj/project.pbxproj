@@ -38,7 +38,6 @@
 		0E1501271EABACCC00EA9B7A /* GestureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureDelegate.swift; sourceTree = "<group>"; };
 		0E1501281EABACCC00EA9B7A /* GestureManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureManager.swift; sourceTree = "<group>"; };
 		0E1501291EABACCC00EA9B7A /* GestureState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureState.swift; sourceTree = "<group>"; };
-		0E1501331EABC30C00EA9B7A /* Subgesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subgesture.swift; sourceTree = "<group>"; };
 		0E9684711EAB724D00AD52A1 /* Kooci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kooci.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E9684741EAB724E00AD52A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E9684791EAB724E00AD52A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,7 +99,6 @@
 				0EE8BF2B1EAC25670069683B /* PourGestureRecognizer.swift */,
 				0EE8BF2D1EAC258D0069683B /* AddIngredientGestureRecognizer.swift */,
 				0EE8BF2F1EAC25BA0069683B /* StirringGestureRecognizer.swift */,
-				0E1501331EABC30C00EA9B7A /* Subgesture.swift */,
 			);
 			name = Gestures;
 			sourceTree = "<group>";

@@ -10,6 +10,8 @@ import Foundation
 
 final class GestureManager: NSObject {
     
+    var gravity = AccelerometerData(x: 0, y: 0, z: 0)
+    
     weak var delegate: GestureDelegate?
     var data = [AccelerometerData]()
     
@@ -21,6 +23,12 @@ final class GestureManager: NSObject {
     }
     
     var broker = MessageBroker<GestureManager>()
+    
+    func modify(data: AccelerometerData) -> AccelerometerData {
+        let alpha: Float = 0.8
+        gravity = alpha * gravity + (1 - alpha) * data
+        return data - gravity
+    }
     
     func start() {
         broker.receiver = self
@@ -36,13 +44,15 @@ extension GestureManager: MessageReceiver {
     }
     
     func broker(_ broker: MessageBroker<GestureManager>, didReceive message: AccelerometerData) {
-        data.append(message)
+        let acceleration = modify(data: message)
+//        print(acceleration)
+        data.append(acceleration)
         guard let gesture = gesture else {
             return
         }
         let state = gesture.state(for: data)
         if self.state != nil, self.state != state {
-            print("Change to \(state)")
+//            print("Change to \(state)")
         }
     }
     

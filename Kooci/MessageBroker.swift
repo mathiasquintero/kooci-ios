@@ -29,10 +29,10 @@ class MessageBroker<Receiver: MessageReceiver>: NSObject, PBPebbleCentralDelegat
         self.watch = watch
         let update: [NSNumber : Any] = [ 0 : "test" ]
         watch.appMessagesPushUpdate(update, with: Receiver.uuid) { (watch, update, error) in
-            print(watch.isConnected)
+//            print(watch.isConnected)
         }
         watch.appMessagesAddReceiveUpdateHandler({ (watch, update) in
-            print("Did receive update from watch")
+//            print("Did receive update from watch")
             guard let message = Receiver.Message(from: update) else {
                 return true
             }
