@@ -10,7 +10,7 @@ import Foundation
 
 protocol RecipeDelegate {
     func didFinish(recipe: Recipe)
-    
+    func progressChanged(_ recipe: Recipe)
     func sayInstruction(text: String)
 }
 
@@ -51,6 +51,7 @@ extension Recipe: GestureDelegate {
     func gestureManager(_ manager: GestureManager, didFinish gesture: GestureRecognizer?) {
         // do next step if step was not last step
         currentStep += 1
+        delegate?.progressChanged(self)
         if currentStep < steps.count {
             nextStep()
         } else {
@@ -59,4 +60,12 @@ extension Recipe: GestureDelegate {
             delegate?.didFinish(recipe: self)
         }
     }
+}
+
+extension Recipe {
+    
+    var progress: Float {
+        return Float(currentStep) / Float(steps.count)
+    }
+    
 }

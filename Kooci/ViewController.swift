@@ -11,7 +11,9 @@ import Pulsator
 
 class ViewController: UIViewController {
     
-    let watsonService = WatsonServices()
+    @IBOutlet weak var progressView: UIProgressView!
+    
+    var watsonService = WatsonServices()
     var pulsatorMaxRadius: CGFloat = 0
     let pulsatorMaxDuration = 10.0
     let pulsatorMaxInvarval = 5.0
@@ -91,7 +93,7 @@ class ViewController: UIViewController {
         let step2 = Step(text: "Now add three lime wedges and stir it so we get all the good flavors.", gesture: .addIngredient)    // add wedges
         let step2_2 = Step(text: nil, gesture: .stir)   //stir all
         let step3 = Step(text: "Perfekt. Now we can add the rum. Just start pouring, I will tell you when to stop.", gesture: .pour)    // pouring 2 seconds
-        let step4 = Step(text: "Stop. Now add sparkling water until the glass is full and enjoy your drink!", gesture: nil)
+        let step4 = Step(text: "Stop. Now add sparkling water until the glass is full and a dash of sugar for good measure. Enjoy your drink!", gesture: nil)
         let steps = [step1, step1_2, step1_3, step2, step2_2, step3, step4]
         let recipe = Recipe(name: name, steps: steps)
         recipe.delegate = self
@@ -103,11 +105,15 @@ extension ViewController: RecipeDelegate {
     func didFinish(recipe: Recipe) {
         // start listening again
         idle = true
-        startListening()
+//        startListening()
+    }
+    
+    func progressChanged(_ recipe: Recipe) {
+        progressView.setProgress(recipe.progress, animated: true)
     }
     
     func sayInstruction(text: String) {
-        watsonService.speak(text: text){success in
+        watsonService.speak(text: text) { success in
             if success {
                 print("Just said: \(text)")
             }
