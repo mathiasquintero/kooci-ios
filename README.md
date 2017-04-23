@@ -1,3 +1,5 @@
+![Fancy Logo](https://github.com/mathiasquintero/kooci-ios/blob/master/Kooci/Assets.xcassets/AppIcon.appiconset/Icon-60@3x.png?raw=true "Fancy Logo")
+
 # kooci iOS App
 
 This is the iOS App controlling kooci (Pronounced "Cookie").
