@@ -105,4 +105,12 @@ extension ViewController: RecipeDelegate {
         idle = true
         startListening()
     }
+    
+    func sayInstruction(text: String) {
+        watsonService.speak(text: text){success in
+            if success {
+                print("Just said: \(text)")
+            }
+        }
+    }
 }
