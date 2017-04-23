@@ -30,6 +30,6 @@ extension Gesture {
 }
 
 struct Step {
-    let text: String
-    let gestures: [Gesture]
+    let text: String?
+    let gesture: Gesture?
 }

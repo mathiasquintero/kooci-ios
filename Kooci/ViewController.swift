@@ -14,16 +14,18 @@ class ViewController: UIViewController {
     let watsonService = WatsonServices()
     var pulsatorMaxRadius: CGFloat = 0
     let pulsatorMaxDuration = 10.0
-    let pulsatorMaxInterval = 5.0
+    let pulsatorMaxInvarval = 5.0
     let pulsatorNumPulse = 4
     
-    let recipes = [Recipe]()
+    var recipes = [Recipe]()
+    var idle = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         pulsatorMaxRadius = view.frame.width/2
+        createMojito()
         
         startWatson()
         
@@ -58,19 +60,49 @@ class ViewController: UIViewController {
         let text = "Hi I'm kuki!"
         watsonService.speak(text: text){success in
             if success {
-                self.watsonService.startStreaming(){ result in
-                    // get recipe
-                    for recipe in self.recipes {
-                        let startTrigger = recipe.name.lowercased()
-                        let lowerResult = result.lowercased()
-                        if lowerResult.contains(startTrigger) {
-                            recipe.start()
-                            self.watsonService.stopStreaming()
-                        }
-                    }
-                }
+                self.startListening()
             }
         }
     }
+    
+    fileprivate func startListening() {
+        watsonService.startStreaming(completion: { result in
+            // get recipe
+            for recipe in self.recipes {
+                let startTrigger = recipe.name.lowercased()
+                let lowerResult = result.lowercased()
+                if lowerResult.contains(startTrigger) {
+                    // recipe name detected
+                    if self.idle {
+                        self.idle = false
+                        self.watsonService.stopStreaming()
+                        recipe.start()
+                    }
+                }
+            }
+        })
+    }
+    
+    private func createMojito() {
+        let name = "Mojito"
+        let step1 = Step(text: "Start by putting three mint leaves and two tea spoons of sugar in your glass.", gesture: .addIngredient)    // 3 mint leaves
+        let step1_2 = Step(text: nil, gesture: .addIngredient)  // spoon of sugar
+        let step1_3 = Step(text: nil, gesture: .addIngredient)  // spoon of sugar
+        let step2 = Step(text: "Now add three lime wedges and stir it so we get all the good falvors.", gesture: .addIngredient)    // add wedges
+        let step2_2 = Step(text: nil, gesture: .stir)   //stir all
+        let step3 = Step(text: "Perfekt. Now we can add the rum. Just start pouring, I will tell you when to stop.", gesture: .pour)    // pouring 2 seconds
+        let step4 = Step(text: "Stop. Now add sparkling water until the glass is full and enjoy your drink!", gesture: nil)
+        let steps = [step1, step1_2, step1_3, step2, step2_2, step3, step4]
+        let recipe = Recipe(name: name, steps: steps)
+        recipe.delegate = self
+        recipes.append(recipe)
+    }
 }
 
+extension ViewController: RecipeDelegate {
+    func didFinish(recipe: Recipe) {
+        // start listening again
+        idle = true
+        startListening()
+    }
+}

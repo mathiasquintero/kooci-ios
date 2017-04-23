@@ -8,12 +8,18 @@
 
 import Foundation
 
+protocol RecipeDelegate {
+    func didFinish(recipe: Recipe)
+}
+
 class Recipe {
     
     var steps = [Step]()
     var name: String
-    
     var currentStep = 0
+
+    let gestureManager = GestureManager()
+    var delegate: RecipeDelegate?
     
     public init(name: String, steps: [Step]) {
         self.name = name
@@ -21,6 +27,28 @@ class Recipe {
     }
     
     func start() {
-        
+        currentStep = 0
+        gestureManager.delegate = self
+        nextStep()
+    }
+    
+    fileprivate func nextStep() {
+        let step = steps[currentStep]
+        gestureManager.gesture = step.gesture?.gestureRecognizer()
+    }
+}
+
+// gesture delegate
+extension Recipe: GestureDelegate {
+    func gestureManager(_ manager: GestureManager, didFinish gesture: GestureRecognizer) {
+        // do next step if step was not last step
+        currentStep += 1
+        if currentStep < steps.count {
+            nextStep()
+        } else {
+            // recipe finished
+            // set idle to true and start listening again
+            
+        }
     }
 }
