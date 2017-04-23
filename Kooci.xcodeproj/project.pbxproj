@@ -18,7 +18,6 @@
 		0E9684871EAB733400AD52A1 /* MessageBroker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9684861EAB733400AD52A1 /* MessageBroker.swift */; };
 		0E9684891EAB734200AD52A1 /* PebbleDeserializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9684881EAB734200AD52A1 /* PebbleDeserializable.swift */; };
 		0E96848C1EAB77D500AD52A1 /* AccelerometerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E96848B1EAB77D500AD52A1 /* AccelerometerData.swift */; };
-		0EE8BF141EABF6FD0069683B /* gestures-dataset in Resources */ = {isa = PBXBuildFile; fileRef = 0EE8BF131EABF6FD0069683B /* gestures-dataset */; };
 		0EE8BF1D1EAC1FF90069683B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE8BF191EAC1FF90069683B /* Recipe.swift */; };
 		0EE8BF1E1EAC1FF90069683B /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE8BF1A1EAC1FF90069683B /* Step.swift */; };
 		0EE8BF1F1EAC1FF90069683B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE8BF1B1EAC1FF90069683B /* ViewController.swift */; };
@@ -47,7 +46,6 @@
 		0E9684861EAB733400AD52A1 /* MessageBroker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBroker.swift; sourceTree = "<group>"; };
 		0E9684881EAB734200AD52A1 /* PebbleDeserializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PebbleDeserializable.swift; sourceTree = "<group>"; };
 		0E96848B1EAB77D500AD52A1 /* AccelerometerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerData.swift; sourceTree = "<group>"; };
-		0EE8BF131EABF6FD0069683B /* gestures-dataset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "gestures-dataset"; path = "Kooci/gestures-dataset"; sourceTree = "<group>"; };
 		0EE8BF191EAC1FF90069683B /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		0EE8BF1A1EAC1FF90069683B /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		0EE8BF1B1EAC1FF90069683B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,7 +104,6 @@
 		0E9684681EAB724D00AD52A1 = {
 			isa = PBXGroup;
 			children = (
-				0EE8BF131EABF6FD0069683B /* gestures-dataset */,
 				0E9684731EAB724D00AD52A1 /* Kooci */,
 				0E9684721EAB724D00AD52A1 /* Products */,
 				856D870E475DCA1E3DCF3418 /* Pods */,
@@ -242,7 +239,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EE8BF141EABF6FD0069683B /* gestures-dataset in Resources */,
 				0E96847F1EAB724E00AD52A1 /* LaunchScreen.storyboard in Resources */,
 				0E96847C1EAB724E00AD52A1 /* Assets.xcassets in Resources */,
 				0E96847A1EAB724E00AD52A1 /* Main.storyboard in Resources */,
