@@ -25,7 +25,7 @@ class PourGestureRecognizer: GestureRecognizer {
                 return .inProgress
             }
         } else {
-            if frame.y < -0.2 {
+            if frame.y < -0.2 && abs(frame.x) < 0.1 {
                 startDate = Date()
                 return .inProgress
             } else {

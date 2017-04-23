@@ -48,7 +48,7 @@ class Recipe {
 
 // gesture delegate
 extension Recipe: GestureDelegate {
-    func gestureManager(_ manager: GestureManager, didFinish gesture: GestureRecognizer) {
+    func gestureManager(_ manager: GestureManager, didFinish gesture: GestureRecognizer?) {
         // do next step if step was not last step
         currentStep += 1
         if currentStep < steps.count {

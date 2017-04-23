@@ -9,5 +9,5 @@
 import Foundation
 
 protocol GestureDelegate: class {
-    func gestureManager(_ manager: GestureManager, didFinish gesture: GestureRecognizer)
+    func gestureManager(_ manager: GestureManager, didFinish gesture: GestureRecognizer?)
 }

@@ -21,7 +21,7 @@ class AddingIngredientGestureRecognizer: GestureRecognizer {
         }
         let last = frames[frames.count - 2]
         let now = frames[frames.count - 1]
-        if abs(last.y) > 0.2 && abs(now.z) > 0.6 {
+        if abs(now.z) > 0.6 {
             didRecognize = true
             return .done
         } else {
