@@ -36,6 +36,11 @@ class Recipe {
     }
     
     fileprivate func nextStep() {
+        // say text
+        if let instruction = steps[currentStep].text {
+            delegate?.sayInstruction(text: instruction)
+        }
+        // listen for gesture
         let step = steps[currentStep]
         gestureManager.gesture = step.gesture?.gestureRecognizer()
     }
@@ -44,11 +49,6 @@ class Recipe {
 // gesture delegate
 extension Recipe: GestureDelegate {
     func gestureManager(_ manager: GestureManager, didFinish gesture: GestureRecognizer) {
-        // say text
-        if let instruction = steps[currentStep].text {
-            delegate?.sayInstruction(text: instruction)
-        }
-        
         // do next step if step was not last step
         currentStep += 1
         if currentStep < steps.count {
